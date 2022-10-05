@@ -1,0 +1,233 @@
+* {
+    font-family: 'Roboto Mono', monospace;    
+
+  }
+
+  body {
+    line-height: 1.6;
+    margin: 0;
+    background-image: url('https://kudann.ru/uploads/af315a318da415860ee72551a830a06f.png'); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    backdrop-filter: blur(6px); 
+    background-size: cover; 
+     }
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+     /* 
+       list-style: none = No marker is shown 
+     */
+    }
+
+a {
+    color: #599bde;
+    text-decoration: none;
+     /* 
+       text-decoration: none - is used here to not show underlining under an anchor element when a mouse hovers over it.
+       Comment it out and check the result on the page.
+     */
+    }
+
+.logo {
+    margin-right: 10px;
+    font-size: 1.1em;
+    margin-right: 20px;
+    
+      }
+
+.logo:hover{
+    background-color: #01538e;
+    border-radius: 100%;
+}
+
+section {
+
+    padding: 10px 15px;
+    /*border: 7px solid #01538e;*/
+   border-radius: 10px;
+    background-color: rgb(223, 223, 223);
+    margin: 15px;
+    display: block;
+    
+        /* 
+          display: block - displays an element as a block element. It starts on a new line, and takes up the whole width
+       */
+}
+
+
+.header {
+    padding: 9.5px;
+    /*border: 1px solid #3a21c6;*/
+    background-color: #013b65;
+   
+    position: sticky;
+    top: 0;
+
+    
+
+    border-radius: 15px;
+}
+.nav {
+    margin-top: 5px;
+     }
+
+.nav a {
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-size: 1.5em;
+       }
+
+/* Pseudo-class selector */
+.nav a:hover {
+    background-color: #01538e;
+    color: #ffffff;
+             }
+
+
+
+ /* 
+      Applies when the browser's width is 800px wide or wider: 
+    */
+    @media (max-width: 700px) {
+      
+        .header,
+        .nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a.logo{margin: 0px;}
+
+        .column1 {
+            display: none;
+          }
+        .column{
+            width: 100%;
+           
+           /* padding-left:50px;
+            padding-right: 50px;*/
+        }
+        .row{margin-bottom: 10px;}
+        .data{
+
+            font-size: 15px;
+        
+        }
+        
+    }
+
+   @media (min-width: 700px) {
+        
+        .header {
+            
+            align-items: center;
+        }
+        
+    }
+  
+
+    
+    @media (min-width: 700px) {
+        .header,
+        .nav {
+            display: flex;
+        }
+        .header {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .column{width: 60%;}
+        .data{
+
+            font-size: 20px;
+        
+        }
+        
+    }
+
+
+
+
+
+/*///*/
+    .column {
+        float: left;
+        
+        
+      }
+      .column1 {
+        width: auto;
+        height: auto;
+        
+        float: left;
+        width: 20%;
+      }
+/*/////*/
+.column3{
+    float: left;
+    width: 50%;
+
+}
+.data{
+    float: right;
+    width: 50%;
+    text-align: right;
+
+}
+.data > p{
+    color: #013b65;
+}
+
+.pict{
+    width: 100%;
+    height: auto;
+
+}
+
+#user1 {
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 100%;
+  }
+
+.btn {
+    
+    
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #013b65;
+  }
+
+  div .btn{
+    background-color: rgb(79, 79, 79);
+  }
+
+.row{
+    margin-bottom: 10px;
+}     
+
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      
+      
+      .footer{
+            background-color: #013b65;
+      }
