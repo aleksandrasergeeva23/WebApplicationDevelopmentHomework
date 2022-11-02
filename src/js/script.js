@@ -47,23 +47,33 @@ function displayPosts(json){
         let pName = document.createElement( "p");
         pName.className = 'name';
         pName.innerText=element.postAuthotrName;
-        a.appendChild(pName);
-        divColumn3.appendChild(a);
-        divRow.appendChild(divColumn3);
-        sectoin.appendChild(divRow);
-        divColumn.appendChild(sectoin);
-        divBigRow.appendChild(divColumn);
 
+        imgUser1.src=element.postAuthorImage;
+        a.appendChild(imgUser1);
+        a.appendChild(pName);
+        
+        
         //      //
         let divData = document.createElement( "div");
         divData.className = 'data';
         //      //      //
         let pData = document.createElement( "p");
+        pData.innerText=element.postCreateTime;
+
+
+        divData.appendChild(pData);
+
+
+        
+        divColumn3.appendChild(a);
+        divRow.appendChild(divColumn3);
+        divRow.appendChild(divData);
         //end of first
         //header ends
 
         let imgPict = document.createElement( "img");
         imgPict.className = 'pict';
+        imgPict.src=element.postImage;
 
         //SECOND
         let divNav = document.createElement( "div");
@@ -81,7 +91,15 @@ function displayPosts(json){
 
         //ADDING
         
-        imgUser1.src=element.postAuthorImage;
+        
+
+
+        sectoin.appendChild(divRow);
+        sectoin.appendChild(imgPict);
+        divColumn.appendChild(sectoin);
+        divBigRow.appendChild(divColumn);
+
+        document.body.appendChild(divBigRow);
         }
 
 }
