@@ -1,0 +1,9 @@
+﻿AI team – Aleksandra Sergeeva (C17131), Beata Sillat (C14705), Diana Šramova (B59652)
+
+Link to homework repository: https://github.com/aleksandrasergeeva23/WebApplicationDevelopmentHomework1
+
+Websites:
+1. For validating the correctness of the JSON file: 
+https://jsonlint.com/
+2.  That allows you to store your JSON file online:
+https://jsonserve.com/
