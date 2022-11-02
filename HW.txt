@@ -7,3 +7,10 @@ Websites:
 https://jsonlint.com/
 2.  That allows you to store your JSON file online:
 https://jsonserve.com/
+3. Converts image to URI:
+https://websemantics.uk/tools/image-to-data-uri-converter/
+
+JSON file online:
+https://api.jsonserve.com/9i0Jq2
+
+
