@@ -16,8 +16,10 @@ window.onload = function() {
             })
             .finally(() => {
                 let footer = document.createElement("footer");
+                footer.className = 'footer';
+
                 date = new Date().toLocaleString()
-                footer.innerText = date;
+                footer.innerText = "Footer      " + date;
                 document.body.appendChild(footer);
                 })
 
@@ -27,6 +29,11 @@ function displayPosts(json){
     for (let element of json) {
         let divBigRow=document.createElement( "div");
         divBigRow.className = 'row';
+
+        let divColumn1 = document.createElement( "div");
+        divColumn1.className = 'column1';
+        divColumn1.innerText=".";
+
 
         let divColumn = document.createElement( "div");
         divColumn.className = 'column';
@@ -79,25 +86,38 @@ function displayPosts(json){
         let divNav = document.createElement( "div");
         divNav.className = 'nav';
         //THIRD
+
         let div3 = document.createElement( "div");
         //      //
         let p3 = document.createElement( "p");
+        p3.innerText=element.postText;
+        div3.appendChild(p3);
         //4
         let div4 = document.createElement( "div");
         //      //
         let button = document.createElement( "button");
         button.className = 'btn';
+        if(element.postStatusIfLiked){button.innerText="Dislike";}
+        else{
+            button.innerText="Like";
+
+        }
+
 
 
         //ADDING
         
         
 
-
         sectoin.appendChild(divRow);
         sectoin.appendChild(imgPict);
+        sectoin.appendChild(div3);
+        sectoin.appendChild(button);
+
         divColumn.appendChild(sectoin);
+        divBigRow.appendChild(divColumn1);
         divBigRow.appendChild(divColumn);
+        ;
 
         document.body.appendChild(divBigRow);
         }

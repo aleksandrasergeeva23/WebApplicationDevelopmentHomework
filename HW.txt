@@ -6,7 +6,7 @@ Websites:
 1. For validating the correctness of the JSON file: 
 https://jsonlint.com/
 2.  That allows you to store your JSON file online:
-https://jsonserve.com/
+https://app.jsonstorage.net/
 3. Converts image to URI:
 https://websemantics.uk/tools/image-to-data-uri-converter/
 

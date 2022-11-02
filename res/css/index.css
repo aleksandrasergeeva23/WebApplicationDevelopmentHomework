@@ -93,6 +93,7 @@ section {
 
         .column1 {
             display: none;
+            color: #927a94;
           }
         .column{
             width: 100%;
@@ -149,6 +150,7 @@ section {
         
       }
       .column1 {
+        color: #927a94;
         width: auto;
         height: auto;
         
@@ -187,6 +189,7 @@ section {
     width: 50px;
     height: 50px;
 }
+
 
 .btn {
     color: white;
