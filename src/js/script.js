@@ -2,11 +2,10 @@ window.onload = function() {
 
 
 
-    fetch('https://api.jsonserve.com/9i0Jq2')
+    fetch('https://api.jsonstorage.net/v1/json/cd15bca4-29aa-4b1b-a8e8-7ba0a59f00f9/de7353a8-f3b2-4cc3-9732-d4f67466a4d7')
         .then((response) => response.json())
         .then(json => {
             displayPosts(json)
-
         })
 
         .catch(err => {
@@ -26,6 +25,12 @@ window.onload = function() {
 
 function displayPosts(json){
     for (let element of json) {
+        let divBigRow=document.createElement( "div");
+        divBigRow.className = 'row';
+
+        let divColumn = document.createElement( "div");
+        divColumn.className = 'column';
+
         let sectoin=document.createElement("section");
         //first div
         let divRow = document.createElement( "div");
@@ -34,10 +39,21 @@ function displayPosts(json){
         let divColumn3 = document.createElement( "div");
         divColumn3.className = 'column3';
         //      //      //
-        let a = document.createElement( "a");
+        let a = document.createElement("a");
 
-        let imgUser1 = document.createElement( "a");
-        img.className = 'user1';
+        let imgUser1 = document.createElement( "img");
+        imgUser1.className = 'user1';
+
+        let pName = document.createElement( "p");
+        pName.className = 'name';
+        pName.innerText=element.postAuthotrName;
+        a.appendChild(pName);
+        divColumn3.appendChild(a);
+        divRow.appendChild(divColumn3);
+        sectoin.appendChild(divRow);
+        divColumn.appendChild(sectoin);
+        divBigRow.appendChild(divColumn);
+
         //      //
         let divData = document.createElement( "div");
         divData.className = 'data';
@@ -63,23 +79,14 @@ function displayPosts(json){
         button.className = 'btn';
 
 
-        //ADDIND
+        //ADDING
         
+        imgUser1.src=element.postAuthorImage;
 
 
 
 
 
-        // lets add a post title to the div
-        postTitle.innerText = element.title;
-        // lets append this postTitle to the div
-        div.appendChild(postTitle);
-        // lets add the body of the post to the div
-        let postBody2 = document.createElement ("p");
-        //lets add this post body to the div
-        postBody2.innerText = element.body;
-        //lets append the body to the div 
-        div.appendChild(postBody2);
-        // now append the div to the document 
-        document.body.appendChild(div);}
+
+        }
 }
