@@ -1,6 +1,7 @@
 [{
     "postId": 1,
     "postAuthotrName": "Snoopy",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "02.10.2022",
     "postImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.farmersalmanac.com%2Fforget-me-not-blue-flowers&psig=AOvVaw1-56NsUHybYaxUKQDJXDcp&ust=1667464415240000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKDD6pKLj_sCFQAAAAAdAAAAABAE",
     "postStatusIfLiked": false
@@ -8,6 +9,7 @@
 {
     "postId": 2,
     "postAuthotrName": "Ariel",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "03.10.2022",
     "postImage": "https://images.lifestyleasia.com/wp-content/uploads/sites/5/2022/05/30230934/plumeria.jpg",
     "postStatusIfLiked": false
@@ -15,6 +17,7 @@
 {
     "postId": 3,
     "postAuthotrName": "Jasmine",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "04.10.2022",
     "postImage": "https://i.pinimg.com/564x/c4/2a/54/c42a547d6c97571c89a85e96a4ba5362.jpg",
     "postStatusIfLiked": false
@@ -22,6 +25,7 @@
 {
     "postId": 4,
     "postAuthotrName": "Tiana",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "05.10.2022",
     "postImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.farmersalmanac.com%2Fforget-me-not-blue-flowers&psig=AOvVaw1-56NsUHybYaxUKQDJXDcp&ust=1667464415240000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKDD6pKLj_sCFQAAAAAdAAAAABAE",
     "postStatusIfLiked": false
@@ -29,6 +33,7 @@
 {
     "postId": 5,
     "postAuthotrName": "Belle",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "06.10.2022",
     "postImage": "https://i.pinimg.com/564x/60/05/1a/60051a3f37340fbfeb268f4bac04527d.jpg",
     "postStatusIfLiked": false
@@ -36,6 +41,7 @@
 {
     "postId": 6,
     "postAuthotrName": "Rapunzel",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "07.10.2022",
     "postImage": "https://i.pinimg.com/736x/20/75/14/207514099a8559ef801eb82b3c4ff966.jpg",
     "postStatusIfLiked": false
@@ -43,13 +49,15 @@
 {
     "postId": 7,
     "postAuthotrName": "Merida",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "08.10.2022",
-    "postImage": "",
+    "postImage": "https://i.pinimg.com/564x/21/b0/d3/21b0d3153ea80688daaeb3f8342dbe60.jpg",
     "postStatusIfLiked": false
 },
 {
     "postId": 8,
     "postAuthotrName": "Cinderella",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "09.10.2022",
     "postImage": "https://i.pinimg.com/564x/5c/48/18/5c481883f4cee2cc91646e7749273479.jpg",
     "postStatusIfLiked": false
@@ -57,6 +65,7 @@
 {
     "postId": 9,
     "postAuthotrName": "Mulan",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "10.10.2022",
     "postImage": "https://i.pinimg.com/564x/06/a6/ba/06a6ba8a9c97c6bb71ce99bcc65dec1a.jpg",
     "postStatusIfLiked": false
@@ -64,6 +73,7 @@
 {
     "postId": 1,
     "postAuthotrName": "Pocahontas",
+    "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
     "postCreateTime": "11.10.2022",
     "postImage": "https://i.pinimg.com/564x/c8/7a/b8/c87ab8f51707d15d45db6dcc9802706e.jpg",
     "postStatusIfLiked": false
