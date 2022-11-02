@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript" src="src/js/script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="src/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/4b3f6f281b.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
 
@@ -25,14 +26,22 @@
             <li><a href="addPost.html">Add Post</a></li>
         </ul>
 
-        <a class="logo" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="My picture" width="50" height="50" ></a>
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"  href="#"> 
+                <!-- <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="My picture" width="50" height="50" > -->
+                <i class="fa-solid fa-user" style="font-size:30px;color:lightblue; position: left;">
+                </i>
+            </button>
+
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">John Doe</a>
+                <a href="#">john.doe@ut.ee</a>
+                <a href="#">logout</a>
+              </div>
+            </div>
+        </div>
     </header>
-
-
-
-
- 
-
 
     <footer class="footer">
         <ul>
