@@ -14,10 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-image: url(https://i.pinimg.com/originals/05/2c/77/052c779c22d9d7972e9d1e2b42dffd83.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
+  background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    backdrop-filter: blur(6px); 
+    background-size: cover; 
 }
 
 nav {

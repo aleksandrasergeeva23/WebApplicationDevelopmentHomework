@@ -5,7 +5,7 @@
 <span class="author"> <b>Author:</b> {{product.author}} </span>
 <br>
 <span class="goodreads"> <img class="fotoPost" :src = product.goodreads></span>
-<span class="price"> Price: € {{product.price}} </span> 
+<span class="price"> Description:  {{product.price}} </span> 
 </p>
 </div>
 </template>
@@ -37,8 +37,8 @@ box-shadow: 1px 2px 50px rgba(0, 0, 0, 0.733);
 border-radius: 40px;
 margin-top: 40px;
 padding: 10px 20px;
-margin-left: 150px;
-margin-right: 150px;
+margin-left: 230px;
+margin-right: 230px;
 
 }
 #comp-list-two ul{
@@ -53,7 +53,7 @@ background: rgba(255,255,255,0.7);
 }
 .price{
 font-weight: bold;
-color: #860CE8;
+color: #1c2e2c;
 display: block;
 }
 span{
@@ -61,7 +61,10 @@ margin-right: 10px;
 }
 
 .fotoPost{
-width: 100%;
+width: 40%;
+margin-top: 20px;
+border-radius: 10%;
+
 
 }
 </style>
