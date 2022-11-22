@@ -1,11 +1,11 @@
 <template>
 <div id= "comp-list-two">
 <h1> Posts</h1>
-<p class="item" v-for="product in posts" :key="product.id">
-<span class="author"> <b>Author:</b> {{product.author}} </span>
+<p class="post" v-for="post in posts" :key="post.id">
+<span class="author"> <b>Author:</b> {{post.postAuthotrName}} </span>
 <br>
-<span class="goodreads"> <img class="fotoPost" :src = product.goodreads></span>
-<span class="price"> Description:  {{product.price}} </span> 
+<span class="foto"> <img class="fotoPost" :src = post.postImage></span>
+<span class="description"> Description: {{post.postText}} </span> 
 </p>
 </div>
 </template>
@@ -26,7 +26,7 @@ return this.$store.state.posts
 </script>
 
 <style scoped>
-.item{
+.post{
 background: rgb(72, 177, 163);
 margin-bottom: 5px;
 padding: 3px 5px;
@@ -51,7 +51,7 @@ margin-top: 10px;
 padding: 20px;
 background: rgba(255,255,255,0.7);
 }
-.price{
+.description{
 font-weight: bold;
 color: #1c2e2c;
 display: block;
