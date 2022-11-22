@@ -15,10 +15,12 @@
   text-align: center;
   background-image: url(https://i.pinimg.com/originals/05/2c/77/052c779c22d9d7972e9d1e2b42dffd83.jpg);
   background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    backdrop-filter: blur(6px); 
-    background-size: cover; 
+  background-attachment: fixed; 
+  backdrop-filter: blur(6px); 
+  background-size: cover; 
+  
 }
+
 
 nav {
   padding: 30px;

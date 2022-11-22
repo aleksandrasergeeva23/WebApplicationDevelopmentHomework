@@ -1,9 +1,5 @@
 <template>
  <div class="products">
-<!--  
-  <button v-on:click="IncreasePrice "> Increase price </button>
-  <button v-on:click="DecreasePrice"> Decrease price </button><br/> 
--->
   <product-compo-two></product-compo-two>
  </div>
 </template>

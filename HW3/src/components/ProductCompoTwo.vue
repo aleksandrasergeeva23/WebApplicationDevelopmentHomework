@@ -5,7 +5,10 @@
 <span class="author"> <b>Author:</b> {{post.postAuthotrName}} </span>
 <br>
 <span class="foto"> <img class="fotoPost" :src = post.postImage></span>
-<span class="description"> Description: {{post.postText}} </span> 
+<span class="description"> Description: {{post.postText}} </span>
+<span class="btn"> <button>Like</button> 
+<h1 class="countOfLikes">{{post.postCounterLike}} Likes</h1>
+ </span> 
 </p>
 </div>
 </template>
@@ -21,11 +24,34 @@ computed: {
     posts(){
 return this.$store.state.posts
 }
-}
+},
+methods: {
+    addlike() {
+      this.counter +=1 ;
+
+    }
+  }
 }
 </script>
 
 <style scoped>
+
+.btn{
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    text-align: left;
+}
+.countOfLikes{
+    color: black;
+        display: block;
+    text-align: right;
+
+}
 .post{
 background: rgb(72, 177, 163);
 margin-bottom: 5px;
