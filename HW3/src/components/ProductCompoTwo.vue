@@ -6,11 +6,14 @@
 <br>
 <span class="foto"> <img class="fotoPost" :src = post.postImage></span>
 <span class="description"> Description: {{post.postText}} </span>
-<span class="btn"> <button>Like</button> 
+<p>Description: {{post.postText}}</p>
+<span class="likes"> <button class="btn" v-on:click="this.addlike">Like</button> 
 <h1 class="countOfLikes">{{post.postCounterLike}} Likes</h1>
  </span> 
 </p>
 </div>
+<!---end of the loop-->
+
 </template>
 
 
@@ -26,29 +29,33 @@ return this.$store.state.posts
 }
 },
 methods: {
-    addlike() {
-      this.counter +=1 ;
-
+    addlike(counting) {
+        this.post.postCounterLike = post.postCounterLike+ 1
     }
   }
 }
 </script>
 
 <style scoped>
-
+.likes{
+    display: block;
+    
+}
 .btn{
+    
     color: white;
     font-size: 16px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    display: block;
+    display: inline-block;
     text-align: left;
+    
 }
 .countOfLikes{
     color: black;
-        display: block;
+    display: inline-block;
     text-align: right;
 
 }
@@ -93,4 +100,12 @@ border-radius: 10%;
 
 
 }
+
+
+.column2 {
+        
+  float: left;
+  width: 20%;
+}
+
 </style>

@@ -11,7 +11,7 @@ export default createStore({
         "postImage": "https://i.pinimg.com/564x/66/69/ba/6669ba0beff5c7b787f11f81e9c28e8f.jpg",
         "postText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "postStatusIfLiked": false,
-        "postCounterLike": 0
+        "postCounterLike": 1
     },
     {
         "postId": 2,
