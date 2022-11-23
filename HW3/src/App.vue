@@ -2,7 +2,7 @@
   <nav style="bac">
     <router-link to="/">Home</router-link> |
     <router-link to="/products">Posts</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">Sign Up</router-link>
   </nav>
   <router-view/>
   <div class="foother" style="background-color: #31786f;padding-top: 20px;margin-top:20px;">
@@ -20,8 +20,6 @@
 
   </div>
 </div>
-        
-        
    <p style="margin: 0px;padding-bottom:10px">@Safe&Comfort</p>
 </div>
 </template>
