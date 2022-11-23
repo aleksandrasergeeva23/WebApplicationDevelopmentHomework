@@ -4,36 +4,18 @@
     <span class="dataInsertion"><p class="message">Email</p>
     <input type="text" placeholder="edit me" class="input_field" v-model="email" required />
     </span>
+    <span v-if="msg.email">{{msg.email}}</span>
     <span class="dataInsertion" ><p class="message">Password</p>
     <input type="text" placeholder="edit me" class="input_field" v-model="password" required/>
     </span>
+    <span v-if="msg.password">{{msg.password}}</span>
     <span><button class="submit">Signup</button></span>
     </div>
-
-    <!-- <div id="visa">
-    <h1>Create a New Vue Account</h1>
-    <form>
-      <label for="full name">Full Name:</label>
-      <input type="text" v-model="name" required>
-      <br>
-      <label for="email">Email Address:</label>
-      <input type="text" v-model="email" required> <br>
-      <span v-if="msg.email">{{msg.email}}</span>
-<label for="password">Password:</label>
-      <input type="text" v-model="password" required><br>
-      <span v-if="msg.password">{{msg.password}}</span>
-      <br>
-      <label for="twitter">Twitter Handle:</label>
-      <input type="text" v-model="twitter" required>
-
-    </form> 
-</div> -->
-
 </template>
 
 <script>
 export default {
-  name: 'Test',
+
   data(){
     return {
       password: '',
@@ -43,9 +25,12 @@ export default {
   },
   watch: {
     email(value){
-      // binding this to the data value in the email input
       this.email = value;
       this.validateEmail(value);
+    },
+    password(value){
+        this.password = value;
+        this.validatePassword(value);
     }
   },
   methods:{
@@ -53,11 +38,33 @@ export default {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value))
   {
     this.msg['email'] = '';
-  } else{
+  } else {
     this.msg['email'] = 'Invalid Email Address';
-  } 
-    }
   }
+},
+  validatePassword(value){
+      let differenceSmaller = 8 - value.length;
+      let differenceBigger = value.length - 8;
+      if (value.length<8) {
+        this.msg['password'] = 'Must be 8 characters! '+ differenceSmaller + ' characters left' ;
+      } else if(value.length>15){
+        this.msg['password'] = 'Must be not more than 15 characters! Reduce from '+ differenceBigger + ' characters' ;
+      } 
+      else if(!/\d/.test(value)){
+        this.msg['password'] = 'It must contain at least one digit';
+      } else if(!/[A-Z]/.test(value)){
+        this.msg['password'] = 'It must contain at least one uppercase letter';
+      } else if(!/[a-z]*[a-z]/.test(value)){
+        this.msg['password'] = 'It must contain at least two lowercase letters';
+      }
+      else if(!/[_]/.test(value)){
+        this.msg['password'] = 'It must contain at least one underscore';
+    }
+      else{
+        this.msg['password'] = '';
+      }
+    }
+} 
 }
 </script>
 
