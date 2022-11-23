@@ -5,12 +5,12 @@
 <span class="author"> <b>Author:</b> {{post.postAuthotrName}} </span>
 <br>
 <span class="foto"> <img class="fotoPost" :src = post.postImage></span>
-<span class="description"> Description: {{post.postText}} </span>
-<p>Description: {{post.postText}}</p>
-<span class="likes"> <button class="btn" v-on:click="this.addlike">Like</button> 
-<h1 class="countOfLikes">{{post.postCounterLike}} Likes</h1>
- </span> 
-</p>
+<span class="description"> Description: {{post.postText}} </span> 
+<span class="likes"> 
+    <button class="btn" @click="increase">Like</button> 
+    <h1 class="countOfLikes">{{post.postCounterLike }} Likes</h1>
+ </span>
+</p> 
 </div>
 <!---end of the loop-->
 
@@ -19,20 +19,21 @@
 
 <script>
 export default {
-name: "Posts",
-data: function() {
-return {
-}},
-computed: {
-    posts(){
-return this.$store.state.posts
-}
-},
-methods: {
-    addlike(counting) {
-        this.post.postCounterLike = post.postCounterLike+ 1
-    }
-  }
+    name: "Posts",
+    components: {},
+    computed: {
+        posts(){
+            return this.$store.state.posts;
+        },
+        likeCount(){
+            return this.$store.getters.getLikes;
+        }
+    },
+    methods: {
+        increase(){
+            this.$store.posts.dispatch('changeCount', 1);
+        },
+    },
 }
 </script>
 

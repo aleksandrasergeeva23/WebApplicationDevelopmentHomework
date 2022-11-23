@@ -4,16 +4,16 @@ export default createStore({
     strict: true,
 
     state: { posts: [{
-        "postId": 1,
-        "postAuthotrName": "Snoopy",
-        "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
-        "postCreateTime": "02.10.2022",
-        "postImage": "https://i.pinimg.com/564x/66/69/ba/6669ba0beff5c7b787f11f81e9c28e8f.jpg",
-        "postText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "postStatusIfLiked": false,
-        "postCounterLike": 1
-    },
-    {
+        postId: 1,
+        postAuthotrName: "Snoopy",
+        postAuthorImage: "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
+        postCreateTime: "02.10.2022",
+        postImage: "https://i.pinimg.com/564x/66/69/ba/6669ba0beff5c7b787f11f81e9c28e8f.jpg",
+        postText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        postStatusIfLiked: false,
+        postCounterLike: 1
+        },
+        {   
         "postId": 2,
         "postAuthotrName": "Ariel",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -22,8 +22,8 @@ export default createStore({
         "postText":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "postStatusIfLiked": true,
         "postCounterLike": 0
-    },
-    {
+        },
+        {
         "postId": 3,
         "postAuthotrName": "Jasmine",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -32,8 +32,8 @@ export default createStore({
         "postText":"Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
         "postStatusIfLiked": false,
         "postCounterLike": 0
-    },
-    {
+        },
+        {
         "postId": 4,
         "postAuthotrName": "Tiana",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -42,8 +42,8 @@ export default createStore({
         "postText":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
         "postStatusIfLiked": true,
         "postCounterLike": 0
-    },
-    {
+        },
+        {
         "postId": 5,
         "postAuthotrName": "Belle",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -52,8 +52,8 @@ export default createStore({
         "postText":"Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
         "postStatusIfLiked": false,
         "postCounterLike": 0
-    },
-    {
+        },
+        {
         "postId": 6,
         "postAuthotrName": "Rapunzel",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -62,8 +62,8 @@ export default createStore({
         "postText":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
         "postStatusIfLiked": true,
         "postCounterLike": 0
-    },
-    {
+        },
+        {
         "postId": 7,
         "postAuthotrName": "Merida",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -72,8 +72,8 @@ export default createStore({
         "postText":"",
         "postStatusIfLiked": false,
         "postCounterLike": 0
-    },
-    {
+        },
+        {
         "postId": 8,
         "postAuthotrName": "Cinderella",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -82,8 +82,8 @@ export default createStore({
         "postText":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
         "postStatusIfLiked": false,
         "postCounterLike": 0
-    },
-    {
+        },
+        {
         "postId": 9,
         "postAuthotrName": "Mulan",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
@@ -92,9 +92,9 @@ export default createStore({
         "postText":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "postStatusIfLiked": true,
         "postCounterLike": 0
-    },
-    {
-        "postId": 1,
+        },
+        {
+        "postId": 10,
         "postAuthotrName": "Pocahontas",
         "postAuthorImage": "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
         "postCreateTime": "11.10.2022",
@@ -102,9 +102,21 @@ export default createStore({
         "postText":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
         "postStatusIfLiked": false,
         "postCounterLike": 0
-    }
+        }
     ]},
-    getters: {},
-    mutations: {},
-    actions: {}
+    getters: {
+        getLikes(state){
+            return state.posts.postCounterLike;
+        }
+    },
+    mutations: {
+        changeCount(state,payload){ 
+            return state.count += payload  
+        },
+    },
+    actions: {
+        async changeCount({commit}, payload){  
+            return Promise.resolve(commit('changeCount', payload))  
+        }  
+    }
 })

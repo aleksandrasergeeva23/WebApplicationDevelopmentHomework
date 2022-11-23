@@ -16,7 +16,7 @@
   </div>
   <div class="column" style="width: 20%;">
     <img src="https://www.digiseller.ru/preview/820112/p1_3446492_0d1672a2.png" alt="" style="width: 39px; margin: 10px;"><br>
-    <img src="https://www.digiseller.ru/preview/820112/p1_3446492_0d1672a2.png" alt="" style="width: 39px; margin: 10px;">
+    <!-- <img src="https://www.digiseller.ru/preview/820112/p1_3446492_0d1672a2.png" alt="" style="width: 39px; margin: 10px;"> -->
 
   </div>
 </div>
