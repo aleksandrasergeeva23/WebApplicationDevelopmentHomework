@@ -73,7 +73,7 @@ body{
   background: rgba(240, 255, 254, 0.767);
   margin-bottom: 28px;
   padding: 15px;
-  border-radius: 16px;
+  border-radius: 15px;
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 10px ;
