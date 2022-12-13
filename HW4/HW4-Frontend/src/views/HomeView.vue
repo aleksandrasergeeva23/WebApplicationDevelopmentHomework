@@ -1,7 +1,8 @@
 <template>
   <div class="header">
+        <button v-if = "authResult" @click="Logout" class="center">Logout</button>
+
     <div class="container">
-    <button v-if = "authResult" @click="Logout" class="center">Logout</button>
     </div>
     <div class="post-list" v-for="post in posts"   :key="post.index">  
       <div class="post">
@@ -10,8 +11,8 @@
       </div>
     </div>
         <div class="container">
-        <button @click="LogIn"  class="center">Log in</button>
-        <button @click='this.$router.push("/signup")' class="center">Sign up</button>
+        <button @click='this.$router.push("/signup")' class="center">Add post</button>
+        <button class="center">Delete all</button>
       </div>
 
   </div>
@@ -67,14 +68,19 @@ body{
   background: #fafafa;
   position: relative;
 }
+
 .post-list{
-  background: rgb(189, 212, 199);
-  margin-bottom: 5px;
-  padding: 3px 5px;
-  border-radius: 10px;
+  background: rgba(240, 255, 254, 0.767);
+  margin-bottom: 28px;
+  padding: 15px;
+  border-radius: 16px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 10px ;
 }
+
 h3{
-    margin: 0;
+  margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   color: #444;
@@ -106,9 +112,9 @@ label{
   display: block;
   margin: 20px 0 10px;
 }
+
 button {
-  background: rgb(127, 105, 145);
-  border-color: red;
+  background: rgb(195, 159, 224);
   padding: 10px 20px;
   margin-top: 20px;
   color: white;
@@ -123,9 +129,7 @@ nav{
 .post {
     width: 80%;
     position: relative;
-    padding: 10px;
     margin: 10px auto;
-    border: 1px solid gray;
     text-align: left;
 }
 .center {
