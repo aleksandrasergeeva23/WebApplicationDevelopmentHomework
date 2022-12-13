@@ -9,6 +9,11 @@
           <p>  <b> Body: </b> {{post.body}} </p>
       </div>
     </div>
+        <div class="container">
+        <button @click="LogIn"  class="center">Log in</button>
+        <button @click='this.$router.push("/signup")' class="center">Sign up</button>
+      </div>
+
   </div>
 </template>
 
@@ -101,16 +106,15 @@ label{
   display: block;
   margin: 20px 0 10px;
 }
-button{
-  margin-top: 30px;
-  border-radius: 36px;
-  background: #FEE996;
-  border:0;
-  font-weight: 700;
-  font-size: 0.8em;
-  display: block;
-  padding: 10px 16px;
-  letter-spacing: 2px;
+button {
+  background: rgb(127, 105, 145);
+  border-color: red;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  align-items: center;
+  text-align: center;
 }
 nav{
   display: flex;
