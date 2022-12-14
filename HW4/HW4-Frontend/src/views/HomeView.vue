@@ -11,7 +11,8 @@
       </div>
     </div>
         <div class="container">
-        <button @click='this.$router.push("/signup")' class="center">Add post</button>
+        <button v-if = "authResult" @click="start" class="center">Add post</button>
+        <!-- <button @click='this.$router.push("/addpost")' class="center">Add post</button> -->
         <button class="center">Delete all</button>
       </div>
 
@@ -43,6 +44,24 @@ export default {
         console.log('jwt removed');
         //console.log('jwt removed:' + auth.authenticated());
         this.$router.push("/login");
+        //location.assign("/");
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("error logout");
+      });
+    },
+
+    start() { 
+        fetch("http://localhost:3000/auth/start", {
+          credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log('jwt removed');
+        //console.log('jwt removed:' + auth.authenticated());
+        this.$router.push("/addpost");
         //location.assign("/");
       })
       .catch((e) => {

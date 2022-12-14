@@ -94,15 +94,29 @@ app.post('/auth/login', async(req, res) => {
         const user = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
         if (user.rows.length === 0) return res.status(401).json({ error: "User is not registered" });
 
-        /* 
-        To authenticate users, you will need to compare the password they provide with the one in the database. 
-        bcrypt.compare() accepts the plain text password and the hash that you stored, along with a callback function. 
-        That callback supplies an object containing any errors that occurred, and the overall result from the comparison. 
-        If the password matches the hash, the result is true.
+        //Checking if the password is correct
+        const validPassword = await bcrypt.compare(password, user.rows[0].password);
+        //console.log("validPassword:" + validPassword);
+        if (!validPassword) return res.status(401).json({ error: "Incorrect password" });
 
-        bcrypt.compare method takes the first argument as a plain text and the second argument as a hash password. 
-        If both are equal then it returns true else returns false.
-        */
+        const token = await generateJWT(user.rows[0].id);
+        res
+            .status(201)
+            .cookie('jwt', token, { maxAge: 6000000, httpOnly: true })
+            .json({ user_id: user.rows[0].id })
+            .send;
+    } catch (error) {
+        res.status(401).json({ error: error.message });
+    }
+});
+
+
+app.post('/auth/addpost', async(req, res) => {
+    try {
+        console.log("a login request has arrived");
+        const { email, password } = req.body;
+        const user = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
+        if (user.rows.length === 0) return res.status(401).json({ error: "User is not registered" });
 
         //Checking if the password is correct
         const validPassword = await bcrypt.compare(password, user.rows[0].password);
@@ -122,6 +136,11 @@ app.post('/auth/login', async(req, res) => {
 
 //logout a user = deletes the jwt
 app.get('/auth/logout', (req, res) => {
+    console.log('delete jwt request arrived');
+    res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
+});
+
+app.get('/auth/start', (req, res) => {
     console.log('delete jwt request arrived');
     res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
 });
