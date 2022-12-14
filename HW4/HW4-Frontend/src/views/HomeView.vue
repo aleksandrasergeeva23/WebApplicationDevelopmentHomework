@@ -11,10 +11,11 @@
       </div>
     </div>
         <div class="container">
-        <button v-if = "authResult" @click="start" class="center">Add post</button>
-        <!-- <button @click='this.$router.push("/addpost")' class="center">Add post</button> -->
+        <!-- <button v-if = "authResult" @click="start" class="center">Add post</button> -->
+        <button @click='this.$router.push("/addpost")' class="center">Add post</button>
         <button class="center">Delete all</button>
       </div>
+      <!-- @click='this.$router.push("/signup")' -->
 
   </div>
 </template>
