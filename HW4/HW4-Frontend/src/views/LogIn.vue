@@ -49,7 +49,7 @@ LogIn() {
       .then((data) => {
       console.log(data);
       //this.$router.push("/");
-      location.assign("/");
+      location.assign("/posts");
       })
       .catch((e) => {
         console.log(e);

@@ -3,34 +3,32 @@
     <h3>Add post</h3>
     <form>
       <div class="user-box">
-        <input type="text" name="email"  required v-model="email">
-        <label for="email">Body:</label>
+        <input type="text" name="postBody"  required v-model="postBody">
+        <label for="postBody">Body:</label>
       </div>
-      <button @click='this.$router.push("/")' class="center">Add post</button>
+      <button @click="AddPost" class="center">Add post</button>
     </form>
   </div>
 </template>
 
 <script>
 export default {
-name: "addpost", 
+name: "SignUp", 
 
 data: function() {
     return {
-   email: '',
-   password: '',
+   postBody: ''
   }
   },
   methods: {
 
 
-SignUp() {
+AddPost() {
       var data = {
-        email: this.email,
-        password: this.password
+        postBody: this.postBody
       };
       // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
-      fetch("http://localhost:3000/auth/signup", {
+      fetch("http://localhost:3000/auth/addpost", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

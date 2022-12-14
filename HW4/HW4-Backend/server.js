@@ -113,34 +113,49 @@ app.post('/auth/login', async(req, res) => {
 
 app.post('/auth/addpost', async(req, res) => {
     try {
-        console.log("a login request has arrived");
-        const { email, password } = req.body;
-        const user = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
-        if (user.rows.length === 0) return res.status(401).json({ error: "User is not registered" });
-
-        //Checking if the password is correct
-        const validPassword = await bcrypt.compare(password, user.rows[0].password);
-        //console.log("validPassword:" + validPassword);
-        if (!validPassword) return res.status(401).json({ error: "Incorrect password" });
-
-        const token = await generateJWT(user.rows[0].id);
+        console.log("a signup request has arrived");
+        //console.log(req.body);
+        const today = new Date(); 
+        const yyyy = today.getFullYear(); 
+        let mm = today.getMonth() + 1; // Months start at 0! 
+        let dd = today.getDate(); 
+        if (dd < 10) dd = '0' + dd; 
+        if (mm < 10) mm = '0' + mm; 
+        const date = dd + '/' + mm + '/' + yyyy; 
+        const {postBody} = req.body;
+        const newPost = await pool.query( // insert the user and the hashed password into the database
+            "INSERT INTO posts(postCreateTime, postText) values ($1, $2) RETURNING*", [date, postBody]
+        );
+        console.log(newPost.rows[0].id);
+        const token = await generateJWT(newPost.rows[0].id); // generates a JWT by taking the user id as an input (payload)
+        //console.log(token);
+        //res.cookie("isAuthorized", true, { maxAge: 1000 * 60, httpOnly: true });
+        //res.cookie('jwt', token, { maxAge: 6000000, httpOnly: true });
         res
             .status(201)
             .cookie('jwt', token, { maxAge: 6000000, httpOnly: true })
-            .json({ user_id: user.rows[0].id })
+            .json({ post_id: newPost.rows[0].id })
             .send;
-    } catch (error) {
-        res.status(401).json({ error: error.message });
+    } catch (err) {
+        console.error(err.message);
+        res.status(400).send(err.message);
+    }
+});
+
+app.get('/auth/posts', async(req, res) => {
+    try {
+        console.log("get posts request has arrived");
+        const posts = await pool.query(
+            "SELECT * FROM posts"
+        );
+        res.json(posts.rows);
+    } catch (err) {
+        console.error(err.message);
     }
 });
 
 //logout a user = deletes the jwt
 app.get('/auth/logout', (req, res) => {
-    console.log('delete jwt request arrived');
-    res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
-});
-
-app.get('/auth/start', (req, res) => {
     console.log('delete jwt request arrived');
     res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
 });
