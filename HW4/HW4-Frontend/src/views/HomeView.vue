@@ -53,23 +53,23 @@ export default {
       });
     },
 
-    start() { 
-        fetch("http://localhost:3000/auth/start", {
-          credentials: 'include', //  Don't forget to specify this if you need cookies
-      })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        console.log('jwt removed');
-        //console.log('jwt removed:' + auth.authenticated());
-        this.$router.push("/addpost");
-        //location.assign("/");
-      })
-      .catch((e) => {
-        console.log(e);
-        console.log("error logout");
-      });
-    },
+    // start() { 
+    //     fetch("http://localhost:3000/auth/addpost", {
+    //       credentials: 'include', //  Don't forget to specify this if you need cookies
+    //   })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     console.log('jwt removed');
+    //     //console.log('jwt removed:' + auth.authenticated());
+    //     this.$router.push("/addpost");
+    //     //location.assign("/");
+    //   })
+    //   .catch((e) => {
+    //     console.log(e);
+    //     console.log("error logout");
+    //   });
+    // },
   }, 
   mounted() {
         fetch('https://jsonplaceholder.typicode.com/posts')
