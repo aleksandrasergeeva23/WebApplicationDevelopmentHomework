@@ -1,64 +1,61 @@
 <template>
-    <div class="signup-box">
-    <h3>Edit or delete post</h3>
+  <div class="signup-box">
+    <h3>A Post</h3>
     <form>
       <div class="user-box">
-        <input type="text" name="body1">
-        <label for="email">Edit body: </label>
+        <input type="text" name="email"  required v-model="email">
+        <label for="email">Body:</label>
       </div>
-      
       <div class="container">
-        <button @click="EditPost"  class="center">Edite post</button>
-        <button @click="DeletePost" class="center">Delete post</button>
-      </div>
+        <button @click='this.$router.push("/")' class="center">Update</button>
+      <button @click='this.$router.push("/addpost")' class="center">Delete</button>
+    </div>
+      
     </form>
   </div>
-  </template>
-  
-  <script>
-import { setTimeout } from 'timers';
+</template>
 
-  export default {
-  name: "body", 
-  
-  data: function() {
-      return {
-     body1: '',
-     time,
-     
-    }
+<script>
+export default {
+name: "editdeletepost", 
+
+data: function() {
+    return {
+   email: '',
+   password: '',
+  }
+  },
+  methods: {
+
+
+SignUp() {
+      var data = {
+        email: this.email,
+        password: this.password
+      };
+      // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
+      fetch("http://localhost:3000/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+          credentials: 'include', //  Don't forget to specify this if you need cookies
+          body: JSON.stringify(data),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+      console.log(data);
+      this.$router.push("/");
+      //location.assign("/");
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("error");
+      });
     },
-    methods: {
-  
-  
-  EditPost() {
-        var data = {
-          body1: this.body1,
-          time:setTimeout,
-        };
-        // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
-        fetch("http://localhost:3000/#/editdeletepost", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-            credentials: 'include', //  Don't forget to specify this if you need cookies
-            body: JSON.stringify(data),
-        })
-        .then((response) => response.json())
-        .then((data) => {
-        console.log(data);
-        this.$router.push("/");
-        //location.assign("/");
-        })
-        .catch((e) => {
-          console.log(e);
-          console.log("error");
-        });
-      },
-    }, 
-    }
-  </script>
+  }, 
+  }
+</script>
 
 <style scoped>
 .signup-box {
@@ -119,7 +116,6 @@ button {
   align-items: center;
   text-align: center;
 }
-
 
 .center {
   margin: auto;

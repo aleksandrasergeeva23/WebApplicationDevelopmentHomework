@@ -2,7 +2,7 @@ const Pool = require('pg').Pool;
 
 const pool = new Pool({
     user: "postgres",
-    password: "beata123", //add your password
+    password: "123", //add your password
     database: "testWad",
     host: "localhost",
     port: "5432"
@@ -46,7 +46,7 @@ const createTblQuery2 = `
         postText VARCHAR(1000)
     );`;
 
-execute(createTblQuery).then(result => {
+execute(createTblQuery2).then(result => {
     if (result) {
         console.log('Table "posts" is created');
     }

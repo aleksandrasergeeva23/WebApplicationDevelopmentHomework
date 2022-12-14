@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import SignUp from "../views/SignUp.vue";
 import LogIn from "../views/LogIn.vue";
 import AddPost from "../views/AddPost.vue";
-// import EditAndDelete from "../views/EditDEletePost.vue";
+import EditAndDelete from "../views/EditDEletePost.vue";
 import auth from "../auth";
 
 
@@ -45,12 +45,12 @@ const routes = [{
         path: "/addpost",
         name: "addpost",
         component: AddPost
+    },
+    {
+        path: "/editdeletepost",
+        name: "editdeletepost",
+        component: EditAndDelete
     }
-    // {
-    //     path: "/editdeletepost",
-    //     name: "editdeletepost",
-    //     component: EditAndDelete
-    // }
 ];
 
 const router = createRouter({
