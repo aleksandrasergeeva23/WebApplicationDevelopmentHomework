@@ -1,11 +1,21 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="Contacts">
+    <sign-in-compo></sign-in-compo>
   </div>
 </template>
 
 <script>
-export default {
-  name: "AboutView",
-}
-</script>
+ import SignInCompo from "./SignInCompo.vue";
+ export default {
+ name: "SignIn",
+ components: { SignInCompo },
+ data: function() {
+ return {
+ posts:[ ]}},
+ 
+ methods: {
+ 
+ 
+ }
+ }
+ </script>
